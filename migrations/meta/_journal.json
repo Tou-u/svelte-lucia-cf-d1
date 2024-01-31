@@ -5,15 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1706729831140,
-      "tag": "0000_empty_bushwacker",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1706736483713,
-      "tag": "0001_bumpy_stick",
+      "when": 1706739124011,
+      "tag": "0000_glossy_epoch",
       "breakpoints": true
     }
   ]
