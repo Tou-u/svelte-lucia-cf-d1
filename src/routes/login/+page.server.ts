@@ -1,8 +1,8 @@
 import { fail, redirect } from '@sveltejs/kit';
 import type { PageServerLoad, Actions } from './$types';
-import { Argon2id } from 'oslo/password';
 import { eq } from 'drizzle-orm';
 import { userTable } from '$lib/schema';
+import { verifyPasswordHash } from '$lib/server/password-hasher';
 
 export const load: PageServerLoad = async ({ locals }) => {
   if (locals.user) return redirect(302, '/');
@@ -40,7 +40,7 @@ export const actions: Actions = {
       });
     }
 
-    const validPassword = await new Argon2id().verify(existingUser.password, password);
+    const validPassword = await verifyPasswordHash(password, existingUser.password);
     if (!validPassword) {
       return fail(400, {
         message: 'Incorrect username or password'

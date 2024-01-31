@@ -1,8 +1,8 @@
 import { fail, redirect } from '@sveltejs/kit';
 import type { PageServerLoad, Actions } from './$types';
-import { Argon2id } from 'oslo/password';
 import { generateId } from 'lucia';
 import { userTable } from '$lib/schema';
+import { createPasswordHash } from '$lib/server/password-hasher';
 
 export const load: PageServerLoad = async ({ locals }) => {
   if (locals.user) return redirect(302, '/');
@@ -30,7 +30,7 @@ export const actions: Actions = {
       });
     }
 
-    const hashedPassword = await new Argon2id().hash(password);
+    const hashedPassword = await createPasswordHash(password);
     const userId = generateId(15);
 
     try {
