@@ -16,6 +16,7 @@
     "d1:mig:prod": "wrangler d1 migrations apply sveltedb"
   },
   "devDependencies": {
+    "@sveltejs/adapter-cloudflare": "^4.1.0",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "@types/eslint": "8.56.0",
