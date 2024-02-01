@@ -30,14 +30,14 @@ database_name = "sveltedb"
 database_id = "11fba10e-2d8f-3212-adc6-d430e2e8a81a"
 
 ```
-
-6. Migrate starter schema to local database
+6. Rename "sveltedb" for your selected database_name in d1:mig:local and d1:mig:prod in package.json
+7. Migrate starter schema to local database
 
 ```
 bun d1:mig:local
 ```
 
-7. Run app (Do both of the following at the same time)
+8. Run app (Do both of the following at the same time)
 
 ```
 bun proxy
