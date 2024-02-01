@@ -1,4 +1,4 @@
-# SvelteKit - Lucia Auth - Cloudflare Pages - Drizzle ORM Template
+# SvelteKit - Lucia Auth - Cloudflare D1 - Drizzle ORM - Cloudflare Pages Template
 
 ## Demo
 
