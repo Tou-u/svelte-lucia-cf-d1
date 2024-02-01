@@ -1,0 +1,6 @@
+name = "svelte-lucia-cf-d1"
+compatibility_date = "2024-01-29"
+[[d1_databases]]
+binding = "DB"
+database_name = "sveltedb"
+database_id = ""
