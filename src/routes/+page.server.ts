@@ -1,8 +1,13 @@
 import { fail, redirect } from '@sveltejs/kit';
 import type { PageServerLoad, Actions } from './$types';
+import { userTable } from '$lib/schema';
+import { count } from 'drizzle-orm';
 
-export const load: PageServerLoad = async (event) => {
-  return { user: event.locals.user };
+export const load: PageServerLoad = async ({ locals }) => {
+  if (!locals.user) return redirect(302, '/login');
+
+  const users = await locals.DB.select({ value: count() }).from(userTable);
+  return { user: locals.user, users };
 };
 
 export const actions: Actions = {

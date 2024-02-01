@@ -5,8 +5,14 @@
   export let data: PageData;
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<strong>{JSON.stringify(data, null, 2)}</strong>
-<form method="post" use:enhance>
-  <button>Sign out</button>
-</form>
+<section>
+  <article>
+    <h2>Total of users registered <strong>({data.users[0].value})</strong></h2>
+  </article>
+  <article>
+    <strong>{JSON.stringify(data.user, null, 2)}</strong>
+    <form method="post" use:enhance>
+      <button style="margin-top: 10px;">Sign out</button>
+    </form>
+  </article>
+</section>
