@@ -1,5 +1,9 @@
 # SvelteKit - Lucia Auth - Cloudflare Pages - Drizzle ORM Template
 
+## Demo
+
+https://svelte-lucia-cf-d1.pages.dev/
+
 ## Developing
 
 1. Install dependencies (or npm install),
