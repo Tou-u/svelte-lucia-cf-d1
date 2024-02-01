@@ -31,7 +31,7 @@ database_id = "11fba10e-2d8f-3212-adc6-d430e2e8a81a"
 
 ```
 
-6. Migrate schema to local database
+6. Migrate starter schema to local database
 
 ```
 bun d1:mig:local
